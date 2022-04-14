@@ -1,0 +1,19 @@
+Package: BP2CAMSG
+Title: Projet M1-SSD Banques coopératives |  2021-2022
+Version: 0.0.0.9000
+Authors@R: 
+  c(person("Batiste", "Amistadi", ,"batiste.amistadi@etu.univ-grenoble.com", role = c("aut")),
+    person("Cheikh", "Beye", ,"cheick.beye@etu.univ-grenoble.com", role = c("aut")),
+    person("Charline", "Champ", ,"charline.champ@etu.univ-grenoble.com", role = c("cre")),
+    person("Antoine", "Grancher", ,"antoine.grancher@etu.univ-grenoble.com", role = c("aut")),
+    person("Alicia", "Lorandi", ,"alicia.lorandi@etu.univ-grenoble.com", role = c("aut")))
+Description: Fonctions utiles pour la création de nos cartes présents dans notre interface R-Shiny.
+License: MIT + file LICENSE
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.2
+LazyData: true
+Depends: 
+    R (>= 2.10)
+Imports: 
+    ggplot2
