@@ -11,4 +11,4 @@ remotes::install_github('CharlineChamp/BP2CAMSG')
 
 ## Auteurs
 
-[Charline Champ](https://github.com/CharlineChamp))
+[Charline Champ](https://github.com/CharlineChamp)
