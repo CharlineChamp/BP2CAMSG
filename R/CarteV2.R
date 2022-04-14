@@ -4,7 +4,7 @@
 #' @param crit integer
 #' @param label character
 #' @param point interger
-#' @param data data frame
+#' @param bdd_coordonnees_banques2022 data frame
 #'
 #' @return carte ggplot
 #' @export
@@ -19,7 +19,7 @@
 #' @importFrom ggplot2 element_rect
 #' @importFrom ggplot2 aes
 
-gg_map <- function(bdd_zese,crit,label,point,data){
+gg_map <- function(bdd_zese,crit,label,point,bdd_coordonnees_banques2022){
   map <- ggplot(NULL)
   if(crit!=0){
     map <- map+geom_sf(data=bdd_zese,aes(fill=bdd_zese[,crit],geometry=bdd_zese$geometry),size=.2,color=NA)+labs(fill = label)
@@ -31,19 +31,19 @@ gg_map <- function(bdd_zese,crit,label,point,data){
     theme_minimal()+
     theme(panel.background = element_rect(fill = "light blue"))+
     geom_sf_text(data=bdd_zese,aes(label=bdd_zese$`Zone d'emploi 2020`,geometry=bdd_zese$geometry,color="white"),size=2)
-  Longitude <- data$Longitude
-  Latitude <- data$Latitude
-  Banque <- data$Banque
-  Type <- data$Type
+  Longitude <- bdd_coordonnees_banques2022$Longitude
+  Latitude <- bdd_coordonnees_banques2022$Latitude
+  Banque <- bdd_coordonnees_banques2022$Banque
+  Type <- bdd_coordonnees_banques2022$Type
   if(point==0){
     map <- map+
-      geom_point(data=data,aes(x=Longitude,y=Latitude,group=Banque,color=Banque),size=.5)
+      geom_point(data=bdd_coordonnees_banques2022,aes(x=Longitude,y=Latitude,group=Banque,color=Banque),size=.5)
   }else if(point==1){
     map <- map+
-      geom_point(data=data,aes(x=Longitude,y=Latitude,group=Type,color=Type),size=.5)
+      geom_point(data=bdd_coordonnees_banques2022,aes(x=Longitude,y=Latitude,group=Type,color=Type),size=.5)
   }else{
     map <- map +
-      geom_point(data=data,aes(x=Longitude,y=Latitude),size=.5,colour="white")
+      geom_point(data=bdd_coordonnees_banques2022,aes(x=Longitude,y=Latitude),size=.5,colour="white")
   }
   map
 }

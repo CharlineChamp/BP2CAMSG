@@ -4,7 +4,7 @@
 \alias{gg_map}
 \title{Version 2 de la carte en ggplot}
 \usage{
-gg_map(bdd_zese, crit, label, point, data)
+gg_map(bdd_zese, crit, label, point, bdd_coordonnees_banques2022)
 }
 \arguments{
 \item{bdd_zese}{data frame}
@@ -15,7 +15,7 @@ gg_map(bdd_zese, crit, label, point, data)
 
 \item{point}{interger}
 
-\item{data}{data frame}
+\item{bdd_coordonnees_banques2022}{data frame}
 }
 \value{
 carte ggplot
