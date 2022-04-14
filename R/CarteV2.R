@@ -31,15 +31,19 @@ gg_map <- function(bdd_zese,crit,label,point,data){
     theme_minimal()+
     theme(panel.background = element_rect(fill = "light blue"))+
     geom_sf_text(data=bdd_zese,aes(label=bdd_zese$`Zone d'emploi 2020`,geometry=bdd_zese$geometry,color="white"),size=2)
+  Longitude <- data$Longitude
+  Latitude <- data$Latitude
+  Banque <- data$Banque
+  Type <- data$Type
   if(point==0){
     map <- map+
-      geom_point(data=data,aes(x=data$Longitude,y=data$Latitude,group=data$Banque,color=data$Banque),size=.5)
+      geom_point(data=data,aes(x=Longitude,y=Latitude,group=Banque,color=Banque),size=.5)
   }else if(point==1){
     map <- map+
-      geom_point(data=data,aes(x=data$Longitude,y=data$Latitude,group=data$Type,color=data$Type),size=.5)
+      geom_point(data=data,aes(x=Longitude,y=Latitude,group=Type,color=Type),size=.5)
   }else{
     map <- map +
-      geom_point(data=data,aes(x=data$Longitude,y=data$Latitude),size=.5,colour="white")
+      geom_point(data=data,aes(x=Longitude,y=Latitude),size=.5,colour="white")
   }
   map
 }
