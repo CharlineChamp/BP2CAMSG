@@ -16,7 +16,7 @@ plotly_map <- function(bdd_coordonnees_banques2022){
 
   # Positionnement des banques sur la carte
   fig <- plot_mapbox(data = bdd_coordonnees_banques2022,lon=~Longitude,lat=~Latitude,
-                     split=~bdd_coordonnees_banques2022,
+                     split=~Banque,
                      size=1,
                      mode = 'markers', hoverinfo='text',
                      marker = list(size = 5, opacity = .5))
