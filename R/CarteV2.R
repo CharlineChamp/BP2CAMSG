@@ -1,7 +1,6 @@
 #' Version 2 de la carte en ggplot
 #'
 #' @param bdd_zese data frame
-#' @param crit integer
 #' @param label character
 #' @param point interger
 #' @param bdd_coordonnees_banques2022 data frame
@@ -19,10 +18,10 @@
 #' @importFrom ggplot2 element_rect
 #' @importFrom ggplot2 aes
 
-gg_map <- function(bdd_zese,crit,label,point,bdd_coordonnees_banques2022){
+gg_map <- function(bdd_zese,label,point,bdd_coordonnees_banques2022){
   map <- ggplot(NULL)
-  if(crit!=0){
-    map <- map+geom_sf(data=bdd_zese,aes(fill=bdd_zese[,crit],geometry=bdd_zese$geometry),size=.2,color=NA)+labs(fill = label)
+  if(label!="Pas de critère"){
+    map <- map+geom_sf(data=bdd_zese,aes(fill=bdd_zese[,colnames(bdd_zese)==label],geometry=bdd_zese$geometry),size=.2,color=NA)+labs(fill = label)
   }else{
     map <-map+geom_sf(data=bdd_zese,aes(geometry=bdd_zese$geometry),size=.2,color="blue",fill="black")
   }
