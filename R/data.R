@@ -25,3 +25,17 @@
 #' @format Une data frame avec 35 variables:
 "bdd_zese"
 
+
+#' Données des coordonnées des banques en 2022 avec leur zone d'emploi
+#'
+#'
+#' @format Une data frame avec six variables :
+#' \describe{
+#' \item{\code{Banque}}{Nom de la banque}
+#' \item{\code{Type}}{Type de la banque}
+#' \item{\code{Adresse}}{Adresse de la banque}
+#' \item{\code{Longitude}}{Longitude de la banque}
+#' \item{\code{Latitude}}{Latitude de la banque}$
+#' \item{\code{ze}}{Zone d'emploi de la banque}
+#' }
+"bdd_coordonnees_ze_banques2022"

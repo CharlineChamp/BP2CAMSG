@@ -18,4 +18,5 @@ Depends:
 Imports: 
     plotly,
     ggplot2,
-    dplyr
+    dplyr,
+    sf
