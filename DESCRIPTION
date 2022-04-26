@@ -19,4 +19,8 @@ Imports:
     plotly,
     ggplot2,
     dplyr,
-    sf
+    sf,
+    spatstat,
+    graphics,
+    spatstat.core,
+    spatstat.geom
