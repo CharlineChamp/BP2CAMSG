@@ -21,8 +21,7 @@ plotly_map <- function(bdd_coordonnees_banques2022){
                      mode = 'markers', hoverinfo='text',
                      marker = list(size = 5, opacity = .5))
 
-  fig <- fig %>% layout(title = 'Banques en France',
-                        font = list(color='white'),
+  fig <- fig %>% layout(font = list(color='white'),
                         plot_bgcolor = '#191A1A', paper_bgcolor = '#191A1A',
                         mapbox = list(style = 'dark'),
                         legend = list(orientation = 'h',

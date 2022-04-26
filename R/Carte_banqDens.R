@@ -35,12 +35,8 @@ banq.dens <- function(ze,type, bdd_zese, bdd_coordonnees_banques2022){
     long <- banq$Longitude
     lat <- banq$Latitude
     mypattern <- ppp(long, lat,c(min(long),max(long)), c(min(lat),max(lat)))
-    banque.ze <- mypattern[ow]
-    plot(density.ppp(banque.ze),main=paste0("Densité en fonction des deux types de banques pour la zone d'emploi ",ze))
-    points(banque.ze,cex=.4)
-  }else{
-    banque.ze <- mypattern[ow]
-    plot(density.ppp(banque.ze),main=paste0("Densité banques de type ",type," pour la zone d'emploi ",ze))
-    points(banque.ze,cex=.4)
   }
+  banque.ze <- mypattern[ow]
+  plot(density.ppp(banque.ze))
+  points(banque.ze,cex=.4)
 }
