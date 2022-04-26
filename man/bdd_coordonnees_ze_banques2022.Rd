@@ -11,7 +11,7 @@ Une data frame avec six variables :
 \item{\code{Type}}{Type de la banque}
 \item{\code{Adresse}}{Adresse de la banque}
 \item{\code{Longitude}}{Longitude de la banque}
-\item{\code{Latitude}}{Latitude de la banque}$
+\item{\code{Latitude}}{Latitude de la banque}
 \item{\code{ze}}{Zone d'emploi de la banque}
 }
 }

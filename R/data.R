@@ -35,7 +35,13 @@
 #' \item{\code{Type}}{Type de la banque}
 #' \item{\code{Adresse}}{Adresse de la banque}
 #' \item{\code{Longitude}}{Longitude de la banque}
-#' \item{\code{Latitude}}{Latitude de la banque}$
+#' \item{\code{Latitude}}{Latitude de la banque}
 #' \item{\code{ze}}{Zone d'emploi de la banque}
 #' }
 "bdd_coordonnees_ze_banques2022"
+
+#' Données du nombre des banques en 2022 en fonction de leur zone d'emploi
+#'
+#'
+#' @format Une data frame avec six variables :
+"bdd_effectif_banques2022_ze2020"
