@@ -9,6 +9,11 @@ L'installation du package  ```BP2CAMSG``` se fait à l'aide de la commande :
 remotes::install_github('CharlineChamp/BP2CAMSG')
 ```
 
-## Auteurs
+## Créateur
 
 [Charline Champ](https://github.com/CharlineChamp)
+
+
+## Auteurs
+
+[Bastiste Amistadi](https://github.com/devilbaba), [Cheikh Beye](https://github.com/cheikhbeye), [Charline Champ](https://github.com/CharlineChamp), [Antoine Grancher](https://github.com/Antoine7526) et [Alicia Lorandi](https://github.com/alicialorandi)
